@@ -7,27 +7,44 @@
     position: relative;
 }
 
+.div-icons:hover{
+    filter: brightness(105%);
+    top: -2px;
+}
+
 .div-icons img{
-    margin-top: 70%;
-    width: 10rem;
+    margin-top: 90%;
+    width: 9rem;
 }
 
 .img-cadastro{
     margin-top: 10%;
-    max-width: 10rem;
+    width: 9rem;
     position: relative;
+}
+
+
+.img-cadastro:hover{
+    top: -2px;
+    filter: brightness(105%);
 }
 
 .img-entre{
     margin-top: 10%;
-    max-width: 10rem;
+    max-width: 9rem;
     position: relative;
+}
+
+.img-entre:hover{
+    filter: brightness(105%);
+    top: -2px;
 }
 
 .div-menu{
     position: relative;
-    margin-left: 8.3%;
+    margin-left:9.5%;
     height: 100vh;
+    max-width: 14.4%;
 }
 
 .div-menu::before {
@@ -40,7 +57,7 @@
   }
 
 h2{
-    padding-top: 5rem;
+    padding-top: 3rem;
 }
 
 li{
@@ -55,6 +72,12 @@ li img{
     margin-top: -7rem;
     width: 80%;
 }
+
+li:hover{
+    top: -4px;
+    filter: brightness(105%);
+}
+
 
 .div-separator{
     background: var(--green-dark);

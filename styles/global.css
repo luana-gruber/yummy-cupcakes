@@ -15,13 +15,15 @@ html{
     --background: #F8F8F8;
     --purple-light: #635357;
     --green-shadow:#316148;
+    --white-light:#fef9db;
+    --blue-background:#badef4;
 
     font-size: 62.5%;
 }
 
 body{
     min-height: 100vh;
-    background-image: linear-gradient(to bottom right, var(--background), var(--green-dark));
+    background-image: linear-gradient(to bottom right, var(--blue-background), var(--green-dark));
 }
 
 body, button, input {
@@ -32,7 +34,7 @@ body, button, input {
 h2{
     font-size: 2.2rem;
     font-weight: 500;
-    color: var(--green-shadow);
+    color: var(--white-light);
 }
 
 .content{
@@ -49,9 +51,4 @@ h2{
     position: absolute;
     z-index: 2;
     box-shadow: 1px 1px 8px var(--green-shadow);
-}
-
-.header{
-    height: 10vh;
-    background-color: var(--green-dark);
 }
