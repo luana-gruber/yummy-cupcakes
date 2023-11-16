@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Open+Sans:wght@300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html{
+    --green-dark: #638E69;
+    --green-light: #B8D8B8;
+    --background: #F8F8F8;
+    --purple-light: #635357;
+    --green-shadow:#316148;
+
+    font-size: 62.5%;
+}
+
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, var(--background), var(--green-dark));
+}
+
+body, button, input {
+    font-size: clamp(14px, 1.6rem, 2vw);
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2{
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--green-shadow);
+}
+
+.content{
+    max-width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.logo{
+    width: 18rem;
+    margin-top: -2.2rem;
+    margin-left: 10%;
+    border-radius: 0 0 8rem 8rem;
+    position: absolute;
+    z-index: 2;
+    box-shadow: 1px 1px 8px var(--green-shadow);
+}
+
+.header{
+    height: 10vh;
+    background-color: var(--green-dark);
+}
