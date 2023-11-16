@@ -1,3 +1,4 @@
+
 .p-subtitulo {
     color: var(--green-dark);
 }
@@ -43,7 +44,7 @@
 .div-menu{
     position: relative;
     margin-left:9.5%;
-    height: 100vh;
+    min-height: 100vh;
     max-width: 14.4%;
 }
 
@@ -57,7 +58,7 @@
   }
 
 h2{
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 li{
@@ -65,6 +66,7 @@ li{
     border-radius: 4rem 4rem 4rem 4rem;
     margin: 0 auto;
     margin-top: 7rem;
+    min-width: 22rem;
     box-shadow: 5px 2px 8px var(--green-shadow);
 }
 
@@ -85,4 +87,32 @@ li:hover{
     margin: 0 auto;
     margin-bottom: 1%;
     height: 1px;
+}
+
+.img-sacola-compras{
+    width: 4rem;
+}
+
+.img-sacola-compras:hover{
+    top: -4px;
+}
+
+h3{
+    font-weight: bold;
+    padding: 1rem;
+    color: var(--green-shadow);
+}
+
+p{
+    font-weight: bold;
+    color: var(--green-shadow);
+}
+
+.span-descricao{
+    font-size: 1.4rem;
+    min-height: 7rem;
+}
+
+.section-cupcakes{
+    margin: 0rem 8rem 0rem 8rem;
 }

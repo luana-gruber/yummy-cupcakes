@@ -15,8 +15,9 @@ html{
     --background: #F8F8F8;
     --purple-light: #635357;
     --green-shadow:#316148;
-    --white-light:#fef9db;
+    --white-light:#fdfae7;
     --blue-background:#badef4;
+    --blue-shadow: #518E8B;
 
     font-size: 62.5%;
 }
@@ -51,4 +52,15 @@ h2{
     position: absolute;
     z-index: 2;
     box-shadow: 1px 1px 8px var(--green-shadow);
+}
+
+button{
+    background-color: var(--green-light);
+    color: var(--green-shadow);
+    font-weight: bold;    
+    font-size: 1.5rem;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-bottom: 1rem;
+    border-radius: 4rem 4rem 4rem 4rem;
+    box-shadow: 1px 2px 2px var(--green-shadow);
 }
