@@ -77,13 +77,13 @@
                                             <div class="col-4 mt-3">
                                                 <button class="btn-qnt">-</button>
                                                 <input class="input-qnt" name="qnt" id="qnt" type="number">
-                                                <button class="btn-qnt">+</button>
+                                                <button class="btn-qnt ml-2">+</button>
                                             </div>
                                             <div class="col-2 mt-4">
                                                 <p>R$6,00</p>
                                             </div>
                                             <div class="col-2 mt-3">
-                                                <img class="img-lixeira" src="/assets/lixeira-icone.png">
+                                                <img class="img-lixeira" data-toggle="modal" data-target="#modal-confirm" src="/assets/lixeira-icone.png">
                                             </div>
 
                                         </div>
@@ -98,13 +98,40 @@
                                     <h3>R$100,00</h3>
                                 </div>
                                 <div class="col-4">
-                                    <button>Finalizar compra</button>
+                                    <button  data-toggle="modal" data-target="#modal-info">Finalizar compra</button>
                                 </div>
                             </div>
                         </section>
                     </div>
                 </div>
             </section>
+            <div class="modal fade mt-5 pt-5" id="modal-confirm">
+                <div class="modal-dialog">
+                     <div class="modal-content">
+                         <div class="modal-body">
+                            <img class="img-cupcake-excluir" src="/assets/cupcake-branco.png">
+                             <p class="mensagem text-dark">Tem certeza que deseja excluir esse cupcake?</p>
+                         </div>
+                         <div class="modal-footer">
+                            <button type="button" class="button confirmarBotao">Confirmar</button>
+                            <button type="button" class="modal-btn-close button text-right" data-dismiss="modal">Fechar</button>
+                          </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="modal fade mt-5 pt-5" id="modal-info">
+                <div class="modal-dialog">
+                     <div class="modal-content">
+                         <div class="modal-body">
+                            <img class="img-cupcake-info" src="/assets/cupcake-branco.png">
+                             <p class="mensagem text-dark">Compra finalizada com sucesso!</p>
+                         </div>
+                         <div class="modal-footer">
+                            <button type="button" class="modal-btn-close button text-right" data-dismiss="modal">Fechar</button>
+                          </div>
+                     </div>
+                 </div>
+             </div>
         </main>
     </div>
 </body>

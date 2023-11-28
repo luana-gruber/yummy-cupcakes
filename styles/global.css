@@ -18,6 +18,8 @@ html{
     --white-light:#fdfae7;
     --blue-background:#badef4;
     --blue-shadow: #518E8B;
+    --red-light: #f48392;
+    --red-dark: #840214;
 
     font-size: 62.5%;
 }

@@ -30,3 +30,12 @@ li:hover{
 .section-cupcakes{
     margin: 0rem 8rem 0rem 8rem;
 }
+
+
+.img-cupcake-info{
+    width: 15%;
+}
+
+.modal-btn-close{
+    margin: 0 auto;
+}

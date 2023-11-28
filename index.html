@@ -63,7 +63,7 @@
                                         <span>Com massa branca e cobertura de baunilha</span>
                                     </div>
                                     <p>R$6,00</p>
-                                    <button>Comprar</button>
+                                    <button data-toggle="modal" data-target="#modal-info">Comprar</button>
                                 </li>
                                 <li class="col-3">
                                     <div class="img-cupcakes">
@@ -74,7 +74,7 @@
                                         <span>Tem sabor de cream cheese, levemente ácido, e pedaços de bolo.</span>
                                     </div>
                                     <p>R$6,00</p>
-                                    <button>Comprar</button>
+                                    <button data-toggle="modal" data-target="#modal-info">Comprar</button>
                                 </li>
                                 <li class="col-3">
                                     <div class="img-cupcakes">
@@ -85,13 +85,26 @@
                                     <span>Com massa simples e cobertura de creme de manteiga com cor rosa</span>
                                     </div>
                                     <p>R$6,00</p>
-                                    <button>Comprar</button>
+                                    <button data-toggle="modal" data-target="#modal-info">Comprar</button>
                                 </li>
                             </ul>
                         </section>
                     </div>
                 </div>
             </section>
+            <div class="modal mt-5 pt-5" id="modal-info">
+                <div class="modal-dialog">
+                     <div class="modal-content">
+                         <div class="modal-body">
+                            <img class="img-cupcake-info" src="/assets/cupcake-azul.png">
+                             <p class="mensagem text-dark">Ebaa! Cupcake adicionado ao carrinho!</p>
+                         </div>
+                         <div class="modal-footer text-center">
+                            <button type="button" class="modal-btn-close button" data-dismiss="modal">Fechar</button>
+                          </div>
+                     </div>
+                 </div>
+             </div>
         </main>
     </div>
 </body>

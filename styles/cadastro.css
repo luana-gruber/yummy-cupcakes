@@ -69,3 +69,11 @@ form{
     background-size: 100%; /* Ajusta o tamanho da imagem para cobrir todo o elemento */
     background-position: 40rem;
 }
+
+.img-cupcake-info{
+    width: 15%;
+}
+
+.modal-btn-close{
+    margin: 0 auto;
+}

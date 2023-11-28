@@ -61,3 +61,18 @@ div{
 .div-menu-carrinho h3:hover{
     color: var(--white-light);
 }
+
+.modal-btn-close{
+    background-color: var(--red-light);
+    color: var(--red-dark);
+    box-shadow: 1px 2px 2px var(--red-dark);
+}
+
+.img-cupcake-excluir{
+    width: 10%;
+    filter:grayscale(60%);
+}
+
+.img-cupcake-info{
+    width: 10%;
+} 
