@@ -22,6 +22,15 @@ html{
     font-size: 62.5%;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: var(--green-shadow);
+}
+
 body{
     min-height: 100vh;
     background-image: linear-gradient(to bottom right, var(--blue-background), var(--green-dark));
@@ -32,11 +41,29 @@ body, button, input {
     font-family: 'Open Sans', sans-serif;
 }
 
+input{
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    width: 45rem;
+    border-radius: 4px 4px 4px 4px;
+    border: 1.5px solid var(--green-light);
+    color: var(--green-shadow);
+    padding: 4px;
+    margin-left: 1rem;
+}
+
+input:hover{
+    border: 1.5px solid var(--green-shadow);
+}
+
 h2{
     font-size: 2.2rem;
     font-weight: 500;
     color: var(--white-light);
+    padding-top: 1rem;
 }
+
 
 .content{
     max-width: 100vw;
@@ -64,3 +91,108 @@ button{
     border-radius: 4rem 4rem 4rem 4rem;
     box-shadow: 1px 2px 2px var(--green-shadow);
 }
+
+button:hover{
+    top: -4px;
+    filter: brightness(105%);
+}
+
+h3{
+    font-weight: bold;
+    padding: 1rem;
+    color: var(--green-shadow);
+}
+
+p{
+    font-weight: bold;
+    color: var(--green-shadow);
+}
+
+form{
+    background-color: var(--background);
+    background-position: right; /* Centraliza a imagem no elemento */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    border-radius: 3rem 3rem 3rem 3rem;
+    margin: 0 auto;
+    max-width: 66rem;
+    box-shadow: 5px 2px 8px var(--green-shadow);
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
+
+label{
+    color: var(--green-shadow);
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+
+.img-sacola-compras{
+    width: 4rem;
+}
+
+.img-sacola-compras:hover{
+    top: -4px;
+}
+
+.div-separator{
+    background: var(--green-dark);
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    height: 1px;
+}
+
+.div-icons{
+    z-index: 2;
+    position: relative;
+}
+
+.div-icons:hover{
+    filter: brightness(105%);
+    top: -2px;
+}
+
+.div-icons img{
+    margin-top: 90%;
+    width: 9rem;
+}
+
+.img-cadastro{
+    margin-top: 10%;
+    width: 9rem;
+    position: relative;
+}
+
+.img-cadastro:hover{
+    top: -2px;
+    filter: brightness(105%);
+}
+
+.img-entre{
+    margin-top: 10%;
+    max-width: 9rem;
+    position: relative;
+}
+
+.img-entre:hover{
+    filter: brightness(105%);
+    top: -2px;
+}
+
+
+.div-menu{
+    position: relative;
+    margin-left:9.5%;
+    min-height: 100vh;
+    max-width: 14.4%;
+}
+
+.div-menu::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    background: white;
+    opacity: 0.3;
+  }

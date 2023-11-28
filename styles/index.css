@@ -1,0 +1,32 @@
+
+.p-subtitulo {
+    color: var(--green-dark);
+}
+
+li{
+    background: var(--background);
+    border-radius: 4rem 4rem 4rem 4rem;
+    margin: 0 auto;
+    margin-top: 7rem;
+    min-width: 22rem;
+    box-shadow: 5px 2px 8px var(--green-shadow);
+}
+
+li img{
+    margin-top: -7rem;
+    width: 80%;
+}
+
+li:hover{
+    top: -4px;
+    filter: brightness(105%);
+}
+
+.span-descricao{
+    font-size: 1.4rem;
+    min-height: 7rem;
+}
+
+.section-cupcakes{
+    margin: 0rem 8rem 0rem 8rem;
+}

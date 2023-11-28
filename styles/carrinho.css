@@ -1,0 +1,63 @@
+.img-prod{
+    width: 25%;
+    margin-top: -1rem;
+}
+
+.img-prod:hover{
+    top: -4px;
+    filter: brightness(105%);
+}
+
+
+.img-lixeira{
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.img-lixeira:hover{
+    filter: brightness(120%);
+}
+
+.input-qnt{
+    width: 4rem;
+}
+
+.btn-qnt{
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+
+.section-carrinho{
+    margin: 0 auto;
+    width: 80rem;
+}
+
+div{
+    margin:0 auto
+}
+
+.div-carrinho{
+    background: var(--background);
+    width: 75rem;
+    box-shadow: 5px 2px 8px var(--green-shadow);
+    border-radius: 2rem 2rem 2rem 2rem;
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.div-carrinho-total{
+    margin: 0 auto;
+    margin-top: 2rem;
+    background: var(--background);
+    width: 75rem;
+    box-shadow: 5px 2px 8px var(--green-shadow);
+    border-radius: 2rem 2rem 2rem 2rem;
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+.div-valor-total h3:hover{
+    filter: brightness(150%);
+}
+
+
+.div-menu-carrinho h3:hover{
+    color: var(--white-light);
+}
