@@ -15,7 +15,7 @@ btnEntrar.addEventListener('click', e =>{
     }
     else{
         form.submit()
-        window.location.href = "index.html"
+        window.location.href = "/"
     }
 })
 

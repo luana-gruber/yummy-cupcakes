@@ -2,9 +2,9 @@
   "name": "yummy-cupcakes",
   "version": "1.0.0",
   "description": "Projeto de um e-commerce de cupcakes desenvolvido para o Projeto Integrador da Universidade Cruzeiro do Sul",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "start":"node src/server.js"
+    "start": "nodemon ."
   },
   "keywords": [],
   "author": "Luana Gruber",
@@ -12,5 +12,8 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

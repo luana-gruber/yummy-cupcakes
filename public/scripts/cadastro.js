@@ -7,7 +7,7 @@ let estado = document.querySelector("#estado")
 let bairro = document.querySelector("#bairro")
 let rua = document.querySelector("#rua")
 let numero = document.querySelector("#numero")
-let complemento = documento.querySelector("#complemento")
+let complemento = document.querySelector("#complemento")
 let senha = document.querySelector("#senha")
 let confSenha = document.querySelector("#confsenha")
 let btnCadastrar = document.querySelector('.btn-cadastrar')
@@ -70,8 +70,10 @@ btnCadastrar.addEventListener('click', e =>{
         hideErrorMessage(confSenha)
     }
     else{
+        btnCadastrar.setAttribute("data-toggle", "modal")
+        btnCadastrar.setAttribute("data-target", "#modal-info")
         form.submit()
-        window.location.href = "login.html"
+        window.location.href = "/login"
     }
 })
 

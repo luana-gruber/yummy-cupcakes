@@ -65,7 +65,7 @@ button{
 form{
     padding-top: 2rem;
     background-color: rgba(240, 240, 240, 0.744);
-    background-image: url('/assets/cupcake-login.png');
+    background-image: url('../images/cupcake-login.png');
     background-size: 100%; /* Ajusta o tamanho da imagem para cobrir todo o elemento */
     background-position: 40rem;
 }

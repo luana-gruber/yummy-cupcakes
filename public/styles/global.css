@@ -188,9 +188,9 @@ label{
 
 .div-menu{
     position: relative;
-    margin-left:9.5%;
+    margin-left:9.3%;
     min-height: 100vh;
-    max-width: 14.4%;
+    max-width: 13.1%;
 }
 
 .div-menu::before {

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ICONE NAVEGADOR -->
-    <link rel="icon" type="imagem/png" href="../assets/icone-navegador.png"/>
+    <link rel="icon" type="imagem/png" href="../images/icone-navegador.png"/>
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
@@ -28,10 +28,10 @@
         <header>
             <div class="row">
                 <div class="col-10 text-left">
-                    <img class="logo" src="../assets/logotipo-yummy.png" alt="Yummy Cupcake Logo">
+                    <img class="logo" src="../images/logotipo-yummy.png" alt="Yummy Cupcake Logo">
                 </div>
                 <div class="col-2 pt-4 img-sacola-compras" >
-                    <a href="carrinho.html"><img class="img-sacola-compras" src="../assets/sacola-compras-icone.png" alt="Ícone carrinho de compras"></a>                </div>
+                    <a href="/carrinho"><img class="img-sacola-compras" src="../images/sacola-compras-icone.png" alt="Ícone carrinho de compras"></a>                </div>
             </div>
         </header>
         <main>
@@ -39,13 +39,13 @@
                 <div class="row">
                     <div class="div-menu col-2">
                         <div class="div-icons">
-                            <a href="index.html"><img src="../assets/cupcakes-home.png" alt="Icone para visualizar cupcakes"></a>
+                            <a href="/"><img src="../images/cupcakes-home.png" alt="Icone para visualizar cupcakes"></a>
                         </div>
                         <div>
-                            <img class="img-cadastro" src="../assets/cadastrese.png" alt="Icone para visualizar cupcakes">
+                            <img class="img-cadastro" src="../images/cadastrese.png" alt="Icone para visualizar cupcakes">
                         </div>
                         <div>
-                            <a href="login.html"><img class="img-entre" src="../assets/entre.png" alt="Icone para visualizar cupcakes"></a>
+                            <a href="/login"><img class="img-entre" src="../images/entre.png" alt="Icone para visualizar cupcakes"></a>
                         </div>
                     </div>
                     <div class="div-apresentacao col-9 p-subtitulo">
@@ -56,9 +56,6 @@
                         </section>
                         <section class="section-form text-left">
                             <form id="formCadastro" method="post" action="">
-                                <!-- <div class="div-cupcake">
-                                    <img class="img-cupcakes" src="../assets/cupcake-cadastro.png" alt="Imagem Cupcake">
-                                </div> -->
                                 <div class="form-group">
                                     <label for-id="nomeContato">Nome completo:<span style="color:red ;">*</span> <br></label>
                                     <input class="" name="nomeContato" id="nomeContato" type="text" placeholder="Ex.: José da Silva"
@@ -95,7 +92,7 @@
                                             maxlength="6">
                                 </div>
                                 <div class="text-center">
-                                    <button class="btn-cadastrar" data-toggle="modal" data-target="#modal-info">Cadastrar</button>
+                                    <button class="btn-cadastrar">Cadastrar</button>
                                 </div>
                             </form>
                         </section>
@@ -106,7 +103,7 @@
                 <div class="modal-dialog">
                      <div class="modal-content">
                          <div class="modal-body">
-                            <img class="img-cupcake-info" src="../assets/cupcake-roxo.png">
+                            <img class="img-cupcake-info" src="images/cupcake-roxo.png">
                              <p class="mensagem text-dark">Cadastro realizado com sucesso!</p>
                          </div>
                          <div class="modal-footer text-center">

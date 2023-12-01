@@ -15,7 +15,7 @@ form{
     padding-top: 4rem;
     max-width: 59rem;
     background-color: rgba(240, 240, 240, 0.744);
-    background-image: url('/assets/cupcake-cadastro.png');
+    background-image: url('../images/cupcake-cadastro.png');
     background-size: 60%; /* Ajusta o tamanho da imagem para cobrir todo o elemento */
     background-position: 40rem;
 }
