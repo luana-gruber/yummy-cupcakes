@@ -20,6 +20,9 @@ html{
     --blue-shadow: #518E8B;
     --red-light: #f48392;
     --red-dark: #840214;
+    --red-light: #de95a2;
+    --rose: #fddfe5;
+    --red: #E24E6A;
 
     font-size: 62.5%;
 }
@@ -198,3 +201,8 @@ label{
     background: white;
     opacity: 0.3;
   }
+
+  .input-error{
+    background-color: var(--rose);
+    border: .2rem solid var(--red);
+}

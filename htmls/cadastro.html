@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/cadastro.css">
 
+    <!-- JAVASCRIT -->
+    <script src="./scripts/cadastro.js" defer></script>
+
     <title>Yummy Cupcake</title>
 </head>
 <body>
@@ -52,7 +55,7 @@
                             <p>Cadastre-se para finalizar sua compra!</p>
                         </section>
                         <section class="section-form text-left">
-                            <form action="">
+                            <form id="formCadastro" method="post" action="">
                                 <!-- <div class="div-cupcake">
                                     <img class="img-cupcakes" src="../assets/cupcake-cadastro.png" alt="Imagem Cupcake">
                                 </div> -->
@@ -92,7 +95,7 @@
                                             maxlength="6">
                                 </div>
                                 <div class="text-center">
-                                    <button data-toggle="modal" data-target="#modal-info">Cadastrar</button>
+                                    <button class="btn-cadastrar" data-toggle="modal" data-target="#modal-info">Cadastrar</button>
                                 </div>
                             </form>
                         </section>
