@@ -1,4 +1,4 @@
-let nome = document.querySelector("#nomeContato")
+let nome = document.querySelector("#nome")
 let telefone = document.querySelector("#telefone")
 let email = document.querySelector("#email")
 let cep = document.querySelector("#cep")
@@ -11,7 +11,7 @@ let complemento = document.querySelector("#complemento")
 let senha = document.querySelector("#senha")
 let confSenha = document.querySelector("#confsenha")
 let btnCadastrar = document.querySelector('.btn-cadastrar')
-let form = document.forms.formLogin
+let form = document.forms.formCadastro
 
 telefone.addEventListener('keypress', (e) => mascaraTelefone(e.target.value))
 telefone.addEventListener('change', (e) => mascaraTelefone(e.target.value)) 
@@ -70,10 +70,11 @@ btnCadastrar.addEventListener('click', e =>{
         hideErrorMessage(confSenha)
     }
     else{
-        btnCadastrar.setAttribute("data-toggle", "modal")
-        btnCadastrar.setAttribute("data-target", "#modal-info")
-        form.submit()
-        window.location.href = "/login"
+        $(btnCadastrar).attr("data-toggle", "modal")
+        $(btnCadastrar).attr("data-target", "#modal-info")
+        $(".modal-btn-close").click(function(){
+            form.submit()
+        })
     }
 })
 

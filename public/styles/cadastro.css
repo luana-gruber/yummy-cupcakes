@@ -4,7 +4,7 @@
     margin: 2rem 2rem 0rem 6.5rem;
 }
 
-#email{
+.email{
     width: 19.8rem;
     margin-left: 1.5rem;
 }
@@ -43,7 +43,7 @@
     margin: 1.5rem 0rem 0rem 3rem;
 }
 
-#senha{
+.senha{
     width: 15rem;
     margin: 0rem 2.2rem 0rem 8.1rem;
 }
@@ -62,7 +62,7 @@ button{
     margin: -12rem 0rem 0rem 50rem;
 } */
 
-form{
+#formCadastro{
     padding-top: 2rem;
     background-color: rgba(240, 240, 240, 0.744);
     background-image: url('../images/cupcake-login.png');

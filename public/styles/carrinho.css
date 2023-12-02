@@ -20,6 +20,8 @@
 
 .input-qnt{
     width: 4rem;
+    pointer-events: none;
+    padding-left: 1.2rem;
 }
 
 .btn-qnt{

@@ -73,22 +73,6 @@
                                         </div>
                                     </div>
                                     <div class="div-carrinho">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <img class="img-prod" src="images/cupcake-branco.png">
-                                            </div>
-                                            <div class="col-4 mt-3">
-                                                <button class="btn-qnt">-</button>
-                                                <input class="input-qnt" name="qnt" id="qnt" type="number">
-                                                <button class="btn-qnt ml-2">+</button>
-                                            </div>
-                                            <div class="col-2 mt-4">
-                                                <p>R$6,00</p>
-                                            </div>
-                                            <div class="col-2 mt-3">
-                                                <img class="img-lixeira" data-toggle="modal" data-target="#modal-confirm" src="images/lixeira-icone.png">
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +81,7 @@
                                     <h3>Total</h3>
                                 </div>
                                 <div class="col-4 div-valor-total">
-                                    <h3>R$100,00</h3>
+                                    <h3 class="h3-valor-total"></h3>
                                 </div>
                                 <div class="col-4">
                                     <button  data-toggle="modal" data-target="#modal-info">Finalizar compra</button>
@@ -112,10 +96,10 @@
                      <div class="modal-content">
                          <div class="modal-body">
                             <img class="img-cupcake-excluir" src="images/cupcake-branco.png">
-                             <p class="mensagem text-dark">Tem certeza que deseja excluir esse cupcake?</p>
+                             <p class="mensagem-excluir text-dark">Tem certeza que deseja excluir esse cupcake?<span id="idItem"></span></p>
                          </div>
                          <div class="modal-footer">
-                            <button type="button" class="button confirmarBotao">Confirmar</button>
+                            <button type="button" class="button btn-Confirm">Confirmar</button>
                             <button type="button" class="modal-btn-close button text-right" data-dismiss="modal">Fechar</button>
                           </div>
                      </div>
