@@ -14,6 +14,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src=" https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/carrinho.css">
@@ -42,12 +45,19 @@
                         <div class="div-icons">
                             <a href="/"><img src="images/cupcakes-home.png" alt="Icone para visualizar cupcakes"></a>
                         </div>
-                        <div>
-                            <a href="/cadastro"><img class="img-cadastro" src="images/cadastrese.png" alt="Icone para visualizar cupcakes"></a>
-                        </div>
-                        <div>
-                            <a href="/login"><img class="img-entre" src="images/entre.png" alt="Icone para visualizar cupcakes"></a>
-                        </div>
+                        <%if(!info.user){ %>
+                            <div>
+                                <a href="/cadastro"><img class="img-cadastro" src="images/cadastrese.png" alt="Icone cadastro"></a>
+                            </div>
+                            <div>
+                                <a href="/login"><img class="img-entre" src="images/entre.png" alt="Icone entrar"></a>
+                            </div>
+                        <% } %>
+                        <%if(info.user){ %>
+                                <div>
+                                    <a href="/logout"><img class="img-cadastro" src="images/sair.png" alt="Icone logout"></a>
+                                </div>
+                            <% } %>
                     </div>
                     <div class="div-apresentacao col-9 p-subtitulo">
                         <section>
@@ -84,7 +94,12 @@
                                     <h3 class="h3-valor-total"></h3>
                                 </div>
                                 <div class="col-4">
-                                    <button  data-toggle="modal" data-target="#modal-info">Finalizar compra</button>
+                                    <%if(!info.user){ %>
+                                        <a href="/login"><button>Entrar para finalizar</button>
+                                    <% } %>
+                                    <%if(info.user){ %>
+                                        <button  data-toggle="modal" data-target="#modal-info" class="btn-finalizar">Finalizar compra</button>
+                                    <% } %>
                                 </div>
                             </div>
                         </section>

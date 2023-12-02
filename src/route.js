@@ -64,17 +64,31 @@
 
     server.get('/carrinho', (req, res) => res.render('carrinho'))
 
+    server.post("/carrinho", async (req, res) => {
+        const info = req.body
+        console.log(info)
+
+        await db.insertPedidos({
+            cliente_id:req.session.userInfo[1],
+            cupcake_id: info.id_cupcake,
+            qnt: info.qnt,
+            valor: info.valor,
+            data_compra: info.data_compra,                
+        })
+        res.send(info)
+    })
+
     server.get('/login', (req, res) => res.render('login'))
 
     server.post("/login", async (req,res)=>{
         const {email,senha} = req.body
         const logado = await db.selectClientes(email,senha)
+        console.log(logado)
         if(logado != ""){
-        req.session.userInfo = [email, logado[0].id]
-        userInfo = req.session.userInfo
-        console.log(userInfo)
-        req.app.locals.info.user = userInfo
-        res.redirect('/')
+            req.session.userInfo = [email, logado[0].id]
+            userInfo = req.session.userInfo
+            req.app.locals.info.user= userInfo
+            res.redirect('/')
         }
     })
 
