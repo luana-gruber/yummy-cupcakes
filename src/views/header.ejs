@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/carrinho.css">
     <link rel="stylesheet" href="styles/sobre.css">
+    <link rel="stylesheet" href="styles/pedidos.css">
 
     <!-- JAVASCRIT -->
     <script src="scripts/login.js" defer></script>
@@ -42,7 +43,7 @@
                 <div class="col-10 text-left">
                     <img class="logo" src="images/logotipo-yummy.png" alt="Yummy Cupcake Logo">
                 </div>
-                <div class="col-2 pt-4 img-sacola-compras" >
+                <div class="col-2 pt-4 img-sacola-compras">
                     <a href="/carrinho"><img class="img-sacola-compras" src="images/sacola-compras-icone.png" alt="Ícone carrinho de compras"></a>                </div>
             </div>
         </header>
@@ -65,6 +66,9 @@
                             </div>
                         <% } %>
                         <%if(info.user){ %>
+                            <div>
+                                <a href="/pedidos"><img class="img-cadastro" src="images/pedidos.png" alt="Icone pedidos"></a>
+                            </div>
                             <div>
                                 <a href="/sobre"><img class="img-cadastro" src="images/sobre.png" alt="Icone sobre nós"></a>
                             </div>

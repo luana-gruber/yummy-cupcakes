@@ -73,7 +73,8 @@
             cupcake_id: info.id_cupcake,
             qnt: info.qnt,
             valor: info.valor,
-            data_compra: info.data_compra,                
+            data_compra: info.data_compra,     
+            total: info.total           
         })
         res.send(info)
     })
@@ -99,6 +100,13 @@
         req.session.destroy()
         res.clearCookie('connect.sid', { path: '/'});
         res.redirect("/login")
+    })
+
+    server.get('/pedidos', async (req, res) => {    
+        const consulta = await db.selectPedidos(req.session.userInfo[1])
+        res.render(`pedidos`, {
+        pedidos: consulta
+        })
     })
 
 server.listen(3000, () => console.log("Rodando")) 

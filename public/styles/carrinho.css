@@ -12,6 +12,8 @@
 .img-lixeira{
     width: 30%;
     margin-bottom: 1rem;
+    margin-left: 3rem;
+    
 }
 
 .img-lixeira:hover{
@@ -21,7 +23,7 @@
 .input-qnt{
     width: 4rem;
     pointer-events: none;
-    padding-left: 1.2rem;
+    padding-left: 1.3rem;
 }
 
 .btn-qnt{
@@ -78,3 +80,7 @@ div{
 .img-cupcake-info{
     width: 10%;
 } 
+
+.p-valor{
+    margin-left: 2.5rem;
+}

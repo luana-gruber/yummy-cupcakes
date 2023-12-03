@@ -1,0 +1,12 @@
+.div-pedidos{
+    background: var(--background);
+    width: 75rem;
+    box-shadow: 5px 2px 8px var(--green-shadow);
+    background-color: rgba(240, 240, 240, 0.728);
+    background-image: url('../images/cupcake-rosa.png');
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o elemento */
+    background-position: 45rem;
+    background-repeat: no-repeat;
+    border-radius: 2rem 2rem 2rem 2rem;
+    padding: 1rem 0rem 1rem 0rem;
+}

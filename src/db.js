@@ -53,9 +53,16 @@ async function selectCupcakes(){
 async function insertPedidos(pedidos){
     const conectado = await conecta()
     console.log(pedidos)
-    const values = [pedidos.cliente_id,pedidos.cupcake_id,pedidos.qnt,pedidos.valor,pedidos.data_compra]
-    return await conectado.query("INSERT INTO pedidos (cliente_id,cupcake_id,qnt,valor,data_compra) VALUES(?,?,?,?,?)", values)
+    const values = [pedidos.cliente_id,pedidos.cupcake_id,pedidos.qnt,pedidos.valor,pedidos.data_compra, pedidos.total]
+    return await conectado.query("INSERT INTO pedidos (cliente_id,cupcake_id,qnt,valor,data_compra, total) VALUES(?,?,?,?,?,?)", values)
    
+}
+
+async function selectPedidos(id){
+    const conectado = await conecta()
+    const value = id
+    const [rows] = await conectado.query("SELECT yummy.cupcakes.nome, yummy.pedidos.valor, yummy.pedidos.data_compra, yummy.pedidos.qnt FROM yummy.pedidos INNER JOIN yummy.cupcakes ON yummy.pedidos.cupcake_id = yummy.cupcakes.id WHERE yummy.pedidos.cliente_id=?;", value)
+    return rows
 }
 
 module.exports = {
@@ -63,5 +70,6 @@ module.exports = {
     selectClientes,
     selectCupcakes,
     insertPedidos,
+    selectPedidos,
     makeSession
 }
