@@ -21,21 +21,21 @@
     user:userInfo
     }
 
-    const options ={
-        expiration: 10800000,
-        createDatabaseTable: true,
+    // const options ={
+    //     expiration: 10800000,
+    //     createDatabaseTable: true,
 
-        schema: {
-            tableName: 'session_tbl',
-            columnNames: {
-                session_id: 'session_id',
-                expires: 'expires',
-                data: 'data'
-            }
-        }  
-    }
+    //     schema: {
+    //         tableName: 'session_tbl',
+    //         columnNames: {
+    //             session_id: 'session_id',
+    //             expires: 'expires',
+    //             data: 'data'
+    //         }
+    //     }  
+    // }
 
-    await db.makeSession(server,options,session)
+    // await db.makeSession(server,options,session)
 
     function checkFirst(req, res, next) {
         if (!req.session.userInfo || userInfo == '') {
