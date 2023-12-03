@@ -204,6 +204,7 @@ label{
 .div-menu{
     min-height: 100vh;
     max-width: 19.1rem;
+    margin-right: 3rem;
 }
 
 @media(max-width: 768px) {

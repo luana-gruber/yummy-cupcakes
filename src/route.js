@@ -45,9 +45,8 @@
 
     server.get('/', async  (req, res) => {
         const consulta = await db.selectCupcakes()
-        if (!req.session.userInfo || userInfo == '') {
+        if (userInfo == '') {
             req.app.locals.info = {}
-            req.session.destroy()
             res.clearCookie('connect.sid', { path: '/'});
         }
         res.render(`index`, {
