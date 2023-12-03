@@ -88,6 +88,7 @@ function excluirCupcake(item){
         novoCarrinho.cupcakes.push(element)
     });
     localStorage.setItem("Carrinho", JSON.stringify(novoCarrinho))
+    window.location.href = "/carrinho"
 }
 
 function selecionaCupcake(item){
