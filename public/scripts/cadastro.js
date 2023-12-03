@@ -28,50 +28,62 @@ btnCadastrar.addEventListener('click', e =>{
     if (nome.value.trim() == "") {
         addError(nome)
         hideErrorMessage(nome)
+        openModal("Preencha o campo nome")
     }
     else if (telefone.value.trim() == ""){
         addError(telefone)
         hideErrorMessage(telefone)
-    }
-    else if (cep.value.trim() == ""){
-        addError(cep)
-        hideErrorMessage(cep)
-    }
-    else if (cidade.value.trim() == ""){
-        addError(cidade)
-        hideErrorMessage(cidade)
-    }
-    else if (estado.value.trim() == ""){
-        addError(estado)
-        hideErrorMessage(estado)
-    }
-    else if (bairro.value.trim() == ""){
-        addError(bairro)
-        hideErrorMessage(bairro)
-    }
-    else if (rua.value.trim() == ""){
-        addError(rua)
-        hideErrorMessage(rua)
-    }
-    else if (numero.value.trim() == ""){
-        addError(numero)
-        hideErrorMessage(numero)
+        openModal("Preencha o campo telefone")
     }
     else if (emailCliente.value.trim() == "" || !isValidEmail(emailCliente.value)){
         addError(emailCliente)
         hideErrorMessage(emailCliente)
+        openModal("Preencha o campo e-mail com um e-mail válido")
     } 
+    else if (cep.value.trim() == ""){
+        addError(cep)
+        hideErrorMessage(cep)
+        openModal("Preencha o campo CEP")
+    }
+    else if (cidade.value.trim() == ""){
+        addError(cidade)
+        hideErrorMessage(cidade)
+        openModal("Preencha o campo cidade")
+    }
+    else if (estado.value.trim() == ""){
+        addError(estado)
+        hideErrorMessage(estado)
+        openModal("Preencha o campo estado")
+    }
+    else if (bairro.value.trim() == ""){
+        addError(bairro)
+        hideErrorMessage(bairro)
+        openModal("Preencha o campo bairro")
+    }
+    else if (rua.value.trim() == ""){
+        addError(rua)
+        hideErrorMessage(rua)
+        openModal("Preencha o campo logradouro")
+    }
+    else if (numero.value.trim() == ""){
+        addError(numero)
+        hideErrorMessage(numero)
+        openModal("Preencha o campo número")
+    }
     else if (senhaCliente.value.trim() == "" || senhaCliente.value.length != 6){
         addError(senhaCliente)
         hideErrorMessage(senhaCliente)
+        openModal("Preencha o campo senha com 6 caracteres")
     }
     else if (confSenha.value.trim() == "" || confSenha.value.trim() != senhaCliente.value.trim()){
         addError(confSenha)
         hideErrorMessage(confSenha)
+        openModal("O campo confirmar senha igual ao campo senha")
     }
     else{
         $(btnCadastrar).attr("data-toggle", "modal")
         $(btnCadastrar).attr("data-target", "#modal-info")
+        openModal("Cadastro realizado com sucesso!")
         $(".modal-btn-close").click(function(){
             formCadastro.submit()
         })
@@ -90,5 +102,13 @@ function isValidEmail(email) {
 function hideErrorMessage(input) {
     input.addEventListener("keyup", () => {
         input.classList.remove('input-error');
+    })
+}
+
+function openModal(mensagem){
+    $(".mensagem").text(mensagem)
+    $("#modal-info").show()
+    $(".modal-btn-close ").click(function(){
+        $("#modal-info").hide()
     })
 }
