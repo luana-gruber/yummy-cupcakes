@@ -61,7 +61,7 @@ async function insertPedidos(pedidos){
 async function selectPedidos(id){
     const conectado = await conecta()
     const value = id
-    const [rows] = await conectado.query("SELECT yummy.cupcakes.nome, yummy.pedidos.valor, yummy.pedidos.data_compra, yummy.pedidos.qnt FROM yummy.pedidos INNER JOIN yummy.cupcakes ON yummy.pedidos.cupcake_id = yummy.cupcakes.id WHERE yummy.pedidos.cliente_id=?;", value)
+    const [rows] = await conectado.query("SELECT yummy.cupcakes.nome, yummy.pedidos.valor, yummy.pedidos.data_compra, yummy.pedidos.qnt, yummy.pedidos.total FROM yummy.pedidos  INNER JOIN yummy.cupcakes ON yummy.pedidos.cupcake_id = yummy.cupcakes.id WHERE yummy.pedidos.cliente_id=?;", value)
     return rows
 }
 
