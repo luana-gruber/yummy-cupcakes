@@ -16,7 +16,7 @@
     server.use(bodyParser.urlencoded({ extended: false }))
     server.use(bodyParser.json())
 
-    var userInfo =' '
+    var userInfo =''
     server.locals.info = {
     user:userInfo
     }
@@ -45,6 +45,11 @@
 
     server.get('/', async  (req, res) => {
         const consulta = await db.selectCupcakes()
+        if (!req.session.userInfo || userInfo == '') {
+            req.app.locals.info = {}
+            req.session.destroy()
+            res.clearCookie('connect.sid', { path: '/'});
+        }
         res.render(`index`, {
             cupcakes: consulta
         })
