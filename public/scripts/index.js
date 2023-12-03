@@ -11,11 +11,9 @@ btnComprar.forEach(item => {
             e.preventDefault()
             var indexCarrinho1 = recuperaCarrinhoCupcakes.cupcakes.findIndex(cupcake => cupcake.id == item.getAttribute("data-id"));
             let arrayCupcakesSalvos1 = recuperaCarrinhoCupcakes.cupcakes.filter(cupcake => (cupcake.id === item.getAttribute("data-id")))
-            console.log(indexCarrinho1)
-            console.log(arrayCupcakesSalvos1)
+
             if (arrayCupcakesSalvos1.length > 0){
-                console.log(indexCarrinho1)
-                console.log(arrayCupcakesSalvos1)
+
                 recuperaCarrinhoCupcakes.cupcakes[indexCarrinho1].qnt += 1
                 localStorage.setItem("Carrinho", JSON.stringify(recuperaCarrinhoCupcakes))
             }

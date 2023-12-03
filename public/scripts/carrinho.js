@@ -93,7 +93,7 @@ function excluirCupcake(item){
 function selecionaCupcake(item){
     $(".btn-Confirm").click(function(){
             excluirCupcake(item)
-            // location.href="/carrinho"
+            location.href="/carrinho"
         })
 }
 

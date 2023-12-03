@@ -77,14 +77,29 @@ h2{
 }
 
 .logo{
-    width: 18rem;
+    width: 19rem;
     margin-top: -2.2rem;
-    margin-left: 10%;
+    margin-left: 2.1%;
     border-radius: 0 0 8rem 8rem;
     position: absolute;
     z-index: 2;
     box-shadow: 1px 1px 8px var(--green-shadow);
 }
+
+@media(max-width: 768px) {
+    .logo{
+        max-width: 16rem;
+        margin-left: -4rem;
+    }
+}
+
+@media(max-width: 419px) {
+    .logo{
+        max-width: 14rem;
+        margin-left: -3rem;
+    }
+}
+
 
 button{
     background-color: var(--green-light);
@@ -187,10 +202,22 @@ label{
 
 
 .div-menu{
-    position: relative;
-    margin-left:9.3%;
     min-height: 100vh;
-    max-width: 13.1%;
+    max-width: 19.1rem;
+}
+
+@media(max-width: 768px) {
+    .div-menu{
+        max-width: 25rem;
+        margin-right: -2rem;
+    }
+}
+
+@media(max-width: 419px) {
+    .div-menu{
+        max-width: 9rem;
+        margin-right: -1rem;
+    }
 }
 
 .div-menu::before {

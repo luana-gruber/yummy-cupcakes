@@ -36,6 +36,14 @@
 
     await db.makeSession(server,options,session)
 
+    function checkFirst(req, res, next) {
+        if (!req.session.userInfo || userInfo == '') {
+            res.redirect('/');
+        } else {
+          next();
+        }
+      }
+
     server.get('/', async  (req, res) => {
         const consulta = await db.selectCupcakes()
         res.render(`index`, {
@@ -91,6 +99,7 @@
             req.app.locals.info.user= userInfo
             res.redirect('/')
         }
+        else {res.render("loginNaoExiste")}
     })
 
     server.get('/sobre', (req, res) => res.render('sobre'))
@@ -102,7 +111,7 @@
         res.redirect("/login")
     })
 
-    server.get('/pedidos', async (req, res) => {    
+    server.get('/pedidos', checkFirst, async (req, res) => {    
         const consulta = await db.selectPedidos(req.session.userInfo[1])
         res.render(`pedidos`, {
         pedidos: consulta

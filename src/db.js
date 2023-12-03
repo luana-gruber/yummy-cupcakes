@@ -40,13 +40,13 @@ async function insertClientes(cliente){
 async function selectClientes(email,senha){
     const conectado = await conecta()
     const values = [email,senha]
-    const [rows] = await conectado.query("SELECT * FROM yummy.cliente WHERE email=? AND senha=?", values)
+    const [rows] = await conectado.query("SELECT * FROM cliente WHERE email=? AND senha=?", values)
     return rows
 }
 
 async function selectCupcakes(){
     const conectado = await conecta()
-    const [rows] = await conectado.query("SELECT * FROM yummy.cupcakes")
+    const [rows] = await conectado.query("SELECT * FROM cupcakes")
     return rows
 }
 
@@ -61,7 +61,7 @@ async function insertPedidos(pedidos){
 async function selectPedidos(id){
     const conectado = await conecta()
     const value = id
-    const [rows] = await conectado.query("SELECT yummy.cupcakes.nome, yummy.pedidos.valor, yummy.pedidos.data_compra, yummy.pedidos.qnt, yummy.pedidos.total FROM yummy.pedidos  INNER JOIN yummy.cupcakes ON yummy.pedidos.cupcake_id = yummy.cupcakes.id WHERE yummy.pedidos.cliente_id=?;", value)
+    const [rows] = await conectado.query("SELECT cupcakes.nome, pedidos.valor, pedidos.data_compra, pedidos.qnt, pedidos.total FROM pedidos  INNER JOIN cupcakes ON pedidos.cupcake_id = cupcakes.id WHERE pedidos.cliente_id=?;", value)
     return rows
 }
 
