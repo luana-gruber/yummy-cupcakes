@@ -16,12 +16,12 @@ async function conecta(){
     return connection
 }
 
-async function makeSession(server, opt){
+async function makeSession(server){
     
     const dia = 1000 * 60 * 60 * 24;
     const conectado = await conecta()
 
-    const  sessionStore = new mysqlSession(opt,conectado)
+    const  sessionStore = new mysqlSession(conectado)
 
     server.use(session({
         secret: "hrgfgrfrty84fwir767",

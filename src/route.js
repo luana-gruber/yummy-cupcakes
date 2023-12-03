@@ -35,7 +35,7 @@
         }  
     }
 
-    await db.makeSession(server,options,session)
+    await db.makeSession(server, session)
 
     function checkFirst(req, res, next) {
         if (!req.session.userInfo || userInfo == '') {
