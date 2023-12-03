@@ -50,11 +50,15 @@
         if (userInfo == '') {
             req.app.locals.info = {}
             res.clearCookie('connect.sid', { path: '/'});
-        }
-        res.render(`index`, {
-            cupcakes: consulta
+            res.render(`index`, {
+                cupcakes: consulta
+            })
+        } else {
+            res.render(`index`, {
+                cupcakes: consulta
+            })
+            }
         })
-    })
 
     server.get('/cadastro', (req, res) => res.render('cadastro'))
 
