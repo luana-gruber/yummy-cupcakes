@@ -42,7 +42,12 @@
                                 <div class="col-3 div-valor-total pr-5">
                                 </div>
                                 <div class="col-5 div-valor-total pl-4">
-                                    <h3 class="h3-valor-total"><%=pedidos[0].total%></h3>
+                                    <% if(pedidos && pedidos[0] && pedidos[0].total !== undefined){ %>
+                                        <h3 class="h3-valor-total"><%=pedidos[0].total%></h3>
+                                    <% } %>
+                                    <% if(pedidos && pedidos[0] && pedidos[0].total === undefined){ %>
+                                        <h3 class="h3-valor-total"></h3>
+                                    <% } %>
                                 </div>
                             </div>
                         </section>
