@@ -22,7 +22,7 @@
     }
 
     const options ={
-        expiration: 10800000,
+        expiration: 3600000,
         createDatabaseTable: false,
 
         schema: {
@@ -35,7 +35,7 @@
         }  
     }
 
-    await db.makeSession(server, session)
+    await db.makeSession(server, session, options)
 
     function checkFirst(req, res, next) {
         if (!req.session.userInfo || userInfo == '') {

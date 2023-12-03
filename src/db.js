@@ -8,25 +8,26 @@ async function conecta(){
         user: process.env.DB_USERNAME, 
         password: process.env.DB_PASSWORD,
         database: process.env.DB_DBNAME,
+        expiration: 3600000,
         waitForConnections: true
     })
     global.connection = conn
     return connection
 }
 
-async function makeSession(server){
+async function makeSession(server, opt){
     
     const dia = 1000 * 60 * 60 * 24;
     const conectado = await conecta()
 
-    const  sessionStore = new mysqlSession(conectado)
+    const  sessionStore = new mysqlSession(opt, conectado)
 
     server.use(session({
         secret: "hrgfgrfrty84fwir767",
         saveUninitialized:true,
         store:sessionStore,
         cookie: { maxAge: dia},
-        resave: true
+        resave: false
     }))
 
 }
