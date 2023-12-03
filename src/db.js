@@ -8,6 +8,7 @@ async function conecta(){
         user: "admin", 
         password: "1E3GHXaZ",
         database: "yummy",
+        port: 10005,
         expiration: 3600000,
         waitForConnections: true
     })
