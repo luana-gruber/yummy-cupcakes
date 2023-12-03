@@ -16,7 +16,6 @@ btnEntrar.addEventListener('click', e =>{
         openModal("Preencha o campo senha com 6 caracteres")
     }
     else{
-        openModal("Login Realizado com sucesso!")
         form.submit()
     }
 })
