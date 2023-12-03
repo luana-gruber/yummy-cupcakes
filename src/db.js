@@ -4,10 +4,13 @@ const mysqlSession = require("express-mysql-session")(session)
 async function conecta(){
     const mysql = require("mysql2/promise")
     const conn = await mysql.createConnection({
-        host: "localhost",
-        user: "luu",
-        password: "123456",
-        database:"yummy"
+        host: process.env.DB_HOST, 
+        user: process.env.DB_USERNAME, 
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_DBNAME,
+        waitForConnections: true,
+        connectionLimit: 10,
+        queueLimit: 0
     })
     global.connection = conn
     return connection
