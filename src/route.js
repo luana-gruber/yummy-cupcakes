@@ -35,8 +35,6 @@
         }  
     }
 
-    await db.makeSession(server, session, options)
-
     function checkFirst(req, res, next) {
         if (!req.session.userInfo || userInfo == '') {
             res.redirect('/');
@@ -95,6 +93,7 @@
         const logado = await db.selectClientes(email,senha)
         console.log(logado)
         if(logado != ""){
+            await db.makeSession(server, session, options)
             req.session.userInfo = [email, logado[0].id]
             userInfo = req.session.userInfo
             req.app.locals.info.user= userInfo
