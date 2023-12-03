@@ -83,8 +83,8 @@
 
         await db.insertPedidos({
             cliente_id:req.session.userInfo[1],
-            cupcake_id: info.id_cupcake,
-            qnt: info.qnt,
+            cupcake_id: parseInt(info.id_cupcake),
+            qnt: parseInt(info.qnt),
             valor: info.valor,
             data_compra: info.data_compra,     
             total: info.total           
