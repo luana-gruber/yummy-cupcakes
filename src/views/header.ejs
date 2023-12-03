@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/carrinho.css">
+    <link rel="stylesheet" href="styles/sobre.css">
 
     <!-- JAVASCRIT -->
     <script src="scripts/login.js" defer></script>
@@ -57,12 +58,18 @@
                                 <a href="/cadastro"><img class="img-cadastro" src="images/cadastrese.png" alt="Icone cadastro"></a>
                             </div>
                             <div>
+                                <a href="/sobre"><img class="img-entre" src="images/sobre.png" alt="Icone sobre nós"></a>
+                            </div>
+                            <div>
                                 <a href="/login"><img class="img-entre" src="images/entre.png" alt="Icone entrar"></a>
                             </div>
                         <% } %>
                         <%if(info.user){ %>
+                            <div>
+                                <a href="/sobre"><img class="img-cadastro" src="images/sobre.png" alt="Icone sobre nós"></a>
+                            </div>
                                 <div>
-                                    <a href="/logout"><img class="img-cadastro" src="images/sair.png" alt="Icone logout"></a>
+                                    <a href="/logout"><img class="img-entre" src="images/sair.png" alt="Icone logout"></a>
                                 </div>
                             <% } %>
                     </div>

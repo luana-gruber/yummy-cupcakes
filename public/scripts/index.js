@@ -1,8 +1,8 @@
 let btnComprar = document.querySelectorAll('.btn-comprar');
-let recuperaCarrinho = {cupcakes:[]}
+let recuperaCarrinhoCupcakes = {cupcakes:[]}
 
 if (localStorage.getItem("Carrinho" != null)){
-    recuperaCarrinho = JSON.parse(localStorage.getItem("Carrinho"))
+    recuperaCarrinhoCupcakes = JSON.parse(localStorage.getItem("Carrinho"))
 }
 
 btnComprar.forEach(item => {
@@ -15,7 +15,7 @@ btnComprar.forEach(item => {
                 preco: item.previousElementSibling.textContent.replace("R$", ""),
                 qnt: 1
             }
-            recuperaCarrinho.cupcakes.push(cupcake)
-            localStorage.setItem("Carrinho", JSON.stringify(recuperaCarrinho))
+            recuperaCarrinhoCupcakes.cupcakes.push(cupcake)
+            localStorage.setItem("Carrinho", JSON.stringify(recuperaCarrinhoCupcakes))
         })
 });

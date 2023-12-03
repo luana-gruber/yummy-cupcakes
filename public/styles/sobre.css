@@ -1,0 +1,14 @@
+.div-texto-sobre{
+    padding-top: 2rem;
+    background-color: rgba(240, 240, 240, 0.744);
+    background-size: 50%; /* Ajusta o tamanho da imagem para cobrir todo o elemento */
+    background-position: 10rem;
+    box-shadow: 5px 2px 8px var(--green-shadow);
+    padding: 2rem;
+
+    border-radius: 2rem 2rem 2rem 2rem;
+}
+
+.div-texto-sobre p {
+    font-weight: 400;
+}

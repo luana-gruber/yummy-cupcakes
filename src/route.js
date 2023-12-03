@@ -92,6 +92,8 @@
         }
     })
 
+    server.get('/sobre', (req, res) => res.render('sobre'))
+
     server.use('/logout', function (req, res) {
         req.app.locals.info = {}
         req.session.destroy()
