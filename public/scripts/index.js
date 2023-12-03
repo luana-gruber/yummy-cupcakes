@@ -1,13 +1,14 @@
 let btnComprar = document.querySelectorAll('.btn-comprar');
 let recuperaCarrinhoCupcakes = {cupcakes:[]}
 
-if (localStorage.getItem("Carrinho" != null)){
+if (localStorage.getItem("Carrinho")){
     recuperaCarrinhoCupcakes = JSON.parse(localStorage.getItem("Carrinho"))
 }
 
 btnComprar.forEach(item => {
-    item.addEventListener('click', () =>
+    item.addEventListener('click', (e) =>
         {
+            e.preventDefault()
             var indexCarrinho1 = recuperaCarrinhoCupcakes.cupcakes.findIndex(cupcake => cupcake.id == item.getAttribute("data-id"));
             let arrayCupcakesSalvos1 = recuperaCarrinhoCupcakes.cupcakes.filter(cupcake => (cupcake.id === item.getAttribute("data-id")))
             console.log(indexCarrinho1)

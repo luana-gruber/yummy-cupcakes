@@ -8,7 +8,7 @@ var ano = dataAtual.getFullYear()
 var mes = (dataAtual.getMonth() + 1).toString().padStart(2, '0');
 var dia = (dataAtual.getDate()).toString().padStart(2, '0');
 
-if (localStorage.getItem("Carrinho") != null){
+if (localStorage.getItem("Carrinho")){
     var recuperaCarrinho = ((JSON.parse(localStorage.getItem('Carrinho'))))
 }
 
