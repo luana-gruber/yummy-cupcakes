@@ -43,7 +43,7 @@
         }
       }
 
-    server.get('/', checkFirst, async  (req, res) => {
+    server.get('/', async  (req, res) => {
         const consulta = await db.selectCupcakes()
         res.render(`index`, {
             cupcakes: consulta
