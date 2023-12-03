@@ -21,7 +21,7 @@ function renderCarrinho(carrinho){
         let imagem = `<div class="col-4"><img class="img-prod" src="${carrinho.cupcakes[i].img}"></div>`
         let qtde = `<div class="col-4"><button class="btn-qnt" onclick="subtraiQuantidade(this)">-</button><input class="input-qnt" name="qnt" type="number" min="1" value="${carrinho.cupcakes[i].qnt}"><button class="btn-qnt ml-2" onclick="adicionaQuantidade(this)">+</button></div>`
         let preco = `<div class="col-2 mt-4"><p class="p-valor">R$${carrinho.cupcakes[i].preco.replace(".",",")}</p></div>`
-        let apagarItem = `<div class="col-2 mt-3"><img class="img-lixeira" data-toggle="modal" data-target="#modal-confirm" onclick="selecionaCupcake(${carrinho.cupcakes[i].id})" src="images/lixeira-icone.png"></div>`
+        let apagarItem = `<div class="col-2 mt-3"><img class="img-lixeira" data-toggle="modal" data-target="#modal-confirm-carrinho" onclick="selecionaCupcake(${carrinho.cupcakes[i].id})" src="images/lixeira-icone.png"></div>`
         let separator = `<div class="div-separator"></div>`
 
         totalValor += Number(carrinho.cupcakes[i].qnt) * parseFloat(carrinho.cupcakes[i].preco.replace("R$", ""))

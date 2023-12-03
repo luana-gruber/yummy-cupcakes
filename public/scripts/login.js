@@ -39,6 +39,6 @@ function openModal(mensagem){
     $(".mensagem-login").text(mensagem)
     $("#modal-info").show()
     $(".modal-btn-close").click(function(){
-        $("#modal-info-login").hide()
+        $("#modal-info").hide()
     })
 }
