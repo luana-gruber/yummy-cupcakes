@@ -7,6 +7,7 @@
     const bodyParser = require('body-parser')
     const session = require("express-session")
     const mysqlSession = require("express-mysql-session")(session)
+    const PORT = process.env.PORT || 3000
 
     server.set('view engine', 'ejs')
     server.set('views', path.join(__dirname, 'views'))
@@ -118,5 +119,5 @@
         })
     })
 
-server.listen(3000, () => console.log("Rodando")) 
+server.listen(PORT, () => console.log("Rodando")) 
 })()
