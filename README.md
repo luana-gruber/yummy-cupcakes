@@ -3,6 +3,9 @@ Bem-vindo ao Yummy Cupcakes, seu destino online para experiências irresistívei
 
 <h1 align="center"> Yummy Cupcakes </h1>
 
+Link para verificar como a aplicação funciona: https://youtu.be/V_rFmWecqOg
+Link com melhorias após feedbacks dos usuários: https://youtu.be/WYwujGNMf3U
+
 # 📁 Acesso ao projeto
 
 **Você pode acessar os arquivos do projeto clicando <a href="https://github.com/luana-gruber/yummy-cupcakes">aqui</a>.</p>
@@ -16,5 +19,7 @@ Bem-vindo ao Yummy Cupcakes, seu destino online para experiências irresistívei
 -Node.js
 -Express
 -MySql
+-CloudClusters
+-Railway
 </code>
 </pre>
